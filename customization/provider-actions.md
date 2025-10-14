@@ -1,0 +1,36 @@
+# Provider Actions
+
+Walker gives you the freedom to provide multiple actions/keybinds for a list item. These are configured in the `[providers.actions]` section of the config. See here: [https://github.com/abenz1267/walker/blob/master/resources/config.toml#L73](https://github.com/abenz1267/walker/blob/master/resources/config.toml#L73)\
+\
+There is a bit of magic behavior going on:
+
+* item has only 1 action and no bind set ⇒ automatic fallback
+* default `bind` key ⇒ `Return`
+* default `after` key ⇒ `Close`
+* default `label` key ⇒ `action` key
+
+### Possible `after` keys and their behavior
+
+|                  |                                  |
+| ---------------- | -------------------------------- |
+| KeepOpen         | Activate item + select next      |
+| Close            | Close                            |
+| Nothing          | Nothing                          |
+| Reload           | Reload with current query        |
+| ClearReload      | Clear query and reload           |
+| AsyncClearReload | Reload gets triggered by backend |
+| AsyncReload      | Reload gets triggered by backend |
+
+### Special actions
+
+|                      |                              |
+| -------------------- | ---------------------------- |
+| provider:\<provider> | switches to a given provider |
+| set:\<set>           | switches to a given set      |
+|                      |                              |
+
+### Fallbacks
+
+Often times, you have multiple providers with the same actions, example: `menus:open` is a common action for custom menus. Instead of having to define this action for every provider, Walker allows you to set fallbacks, see: [https://github.com/abenz1267/walker/blob/master/resources/config.toml#L74](https://github.com/abenz1267/walker/blob/master/resources/config.toml#L74)\
+\
+You can define your own fallbacks in a similar fashion.
