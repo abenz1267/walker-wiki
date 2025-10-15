@@ -44,20 +44,6 @@ Placeholders for the input or empty list can be configured as such:
 | `empty`       | string list | `["desktopapplications"]`                                         | all providers that should be queried when query is empty |
 | `max_results` | number      | `50`                                                              | global max amount of results                             |
 
-You can configure what providers are queried by default or even just when the query is empty:
-
-```
-[providers]
-default = [
-  "desktopapplications",
-  "calc",
-  "runner",
-  "menus",
-  "websearch",
-] # providers to be queried by default
-empty = ["desktopapplications"] # providers to be queried when query is empty
-```
-
 #### Sets
 
 Walker allows you to configure "sets" that you can launch, overwriting the configuration from above. Example:
