@@ -1,0 +1,33 @@
+# Walker and Elephant
+
+Walker is a frontend program that allows you to interact with a backend: Elephant.
+
+Elephant handles:
+
+- what data should be shown
+- how things are executed
+
+Walker handles:
+
+- deciding what is queried
+- how to run actions
+
+Therefore the overall Walker-Experience has to be configured for those two programs separately.
+
+## Providers implemented by Walker per default
+
+Walker implements a bunch of Elephant providers by default, these are:
+
+- bluetooth
+- archlinux packages
+- calc
+- providerlist
+- websearch
+- desktopapplications
+- files
+- todo
+- runner
+- symbols
+- unicode
+- clipboard
+- menus
