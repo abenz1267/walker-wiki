@@ -4,10 +4,10 @@ Walker gives you the freedom to provide multiple actions/keybinds for a list ite
 \
 There is a bit of magic behavior going on:
 
-* item has only 1 action and no bind set ⇒ automatic fallback
-* default `bind` key ⇒ `Return`
-* default `after` key ⇒ `Close`
-* default `label` key ⇒ `action` key
+- item has only 1 action and no bind set ⇒ automatic fallback
+- default `bind` key ⇒ `Return`
+- default `after` key ⇒ `Close`
+- default `label` key ⇒ `action` key
 
 ### Possible `after` keys and their behavior
 
@@ -31,6 +31,14 @@ There is a bit of magic behavior going on:
 
 ### Fallbacks
 
-Often times, you have multiple providers with the same actions, example: `menus:open` is a common action for custom menus. Instead of having to define this action for every provider, Walker allows you to set fallbacks, see: [https://github.com/abenz1267/walker/blob/master/resources/config.toml#L74](https://github.com/abenz1267/walker/blob/master/resources/config.toml#L74)\
-\
+Often times, you have multiple providers with the same actions, example: `menus:open` is a common action for custom menus. Instead of having to define this action for every provider, Walker allows you to set fallbacks, f.e.:
+
+```
+[providers.actions]
+fallback = [
+  { action = "menus:open", label = "open", after = "Nothing" },
+  { action = "erase_history", label = "clear hist", bind = "ctrl h", after = "AsyncReload" },
+]
+```
+
 You can define your own fallbacks in a similar fashion.
