@@ -1,7 +1,15 @@
 # Provider Actions
 
-Walker gives you the freedom to provide multiple actions/keybinds for a list item. These are configured in the `[providers.actions]` section of the config. See here: [https://github.com/abenz1267/walker/blob/master/resources/config.toml#L73](https://github.com/abenz1267/walker/blob/master/resources/config.toml#L73)\
-\
+Walker gives you the freedom to provide multiple actions/keybinds for a list item. These are configured in the `[providers.actions]` section of the config. This section will be merged with the default configuration.
+
+```
+[providers.actions]
+runner = [
+  { action = "run", default = true, bind = "Return" },
+  { action = "runterminal", label = "run in terminal", bind = "shift Return" },
+]
+```
+
 There is a bit of magic behavior going on:
 
 - item has only 1 action and no bind set ⇒ automatic fallback

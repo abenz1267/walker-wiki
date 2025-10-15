@@ -14,6 +14,14 @@ Walker handles:
 
 Therefore the overall Walker-Experience has to be configured for those two programs separately.
 
+## Your Friends:
+
+```
+walker --help
+elephant --help
+elephant generatedoc
+```
+
 ## Providers implemented by Walker per default
 
 Walker implements a bunch of Elephant providers by default, these are:
