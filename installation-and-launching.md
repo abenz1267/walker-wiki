@@ -1,13 +1,54 @@
 # Installation and Launching
 
-### Arch
+### Installing
+
+#### Arch
 
 ```
 yay -S walker
 ```
 
-Will install a basic OOTB Walker+Elephant setup.\
-\
+Will install a basic OOTB Walker+Elephant setup.
+
+#### Fedora
+
+```
+sudo dnf copr enable errornointernet/walker
+sudo dnf install walker
+sudo dnf install elephant
+```
+
+#### openSuse Tumbleweed
+
+```
+# Dependencies
+sudo zypper install git cargo gtk4-devel gtk4-layer-shell-devel libpoppler-glib-devel protobuf-devel cairo-devel go make
+
+# Walker
+git clone https://github.com/abenz1267/walker.git ~/Downloads/walker
+cd ~/Downloads/walker
+sudo make install
+
+# Elephant
+git clone https://github.com/abenz1267/elephant ~/Downloads/elephant
+cd ~/Downloads/elephant
+sudo make install
+
+# Provider desktopapplications
+cd ~/Downloads/elephant/internal/providers/desktopapplications
+sudo make install
+
+# Provider menus
+cd ~/Downloads/elephant/internal/providers/menus
+sudo make install
+
+# Provider files
+cd ~/Downloads/elephant/internal/providers/files
+sudo make install
+```
+
+### Launching
+
 Elephant has to be running in order for Walker to function.
 
 Starting Elephant is best done as a user-service: you can use `elephant service enable` to generate a systemd user-level service. It will install and enable it, but won't start it. `systemctl --user start elephant.service` in order to start it without rebooting.\
