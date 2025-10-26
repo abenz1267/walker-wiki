@@ -3,6 +3,7 @@
 - [Walker - Multi-Purpose Launcher](README.md)
 - [Walker and Elephant](walker-and-elephant.md)
 - [Installation and Launching](installation-and-launching.md)
+- [Providers](providers.md)
 - [Dmenu](dmenu.md)
 
 ## Customization
