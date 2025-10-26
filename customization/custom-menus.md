@@ -4,7 +4,8 @@ Walker is just a frontend that interacts with a backend, Elephant: [https://gith
 \
 Elephant allows you to create custom menus via its `menu` provider. Running `elephant generatedoc` will generate markdown output of every installed provider and it's configuration options. It also includes examples for custom menus.\
 \
-Here's is a more complex example menu:
+
+## Static Menus Examples
 
 ```
 name = "other"
@@ -83,6 +84,47 @@ value = "https://github.com/abenz1267/walker"
 text = "Elephant"
 value = "https://github.com/abenz1267/elephant"
 ```
+
+## Dynamic Menu Example
+
+```toml
+name = "luatest"
+name_pretty = "Lua Test"
+icon = "applications-other"
+lua = "luatest"
+lua_cache = true
+action = "notify-send %VALUE%"
+```
+
+```lua
+function GetEntries()
+    local entries = {}
+    local wallpaper_dir = "/home/andrej/Documents/ArchInstall/wallpapers"
+
+    local handle = io.popen("find '" ..
+        wallpaper_dir ..
+        "' -maxdepth 1 -type f -name '*.jpg' -o -name '*.jpeg' -o -name '*.png' -o -name '*.gif' -o -name '*.bmp' -o -name '*.webp' 2>/dev/null")
+    if handle then
+        for line in handle:lines() do
+            local filename = line:match("([^/]+)$")
+            if filename then
+                table.insert(entries, {
+                    Text = filename,
+                    Subtext = "wallpaper",
+                    Value = line,
+                    -- Preview = line,
+                    -- Icon = line
+                })
+            end
+        end
+        handle:close()
+    end
+
+    return entries
+end
+```
+
+## How to target menus
 
 Menus are treated as providers and can therefore be configured as such. You can run `elephant listproviders` to get an overview of all your installed providers and custom menus.\
 \
