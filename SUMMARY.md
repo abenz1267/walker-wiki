@@ -5,6 +5,7 @@
 - [Installation and Launching](installation-and-launching.md)
 - [Providers](providers.md)
 - [Dmenu](dmenu.md)
+- [FAQ](faq.md)
 
 ## Customization
 
