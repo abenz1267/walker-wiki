@@ -6,6 +6,9 @@
 
 ```
 yay -S walker
+
+// for example
+yay -S elephant elephant-desktopapplications
 ```
 
 Will install a basic OOTB Walker+Elephant setup.
