@@ -87,16 +87,18 @@ value = "https://github.com/abenz1267/elephant"
 
 ## Dynamic Menu Example
 
-```toml
-name = "luatest"
-name_pretty = "Lua Test"
-icon = "applications-other"
-lua = "luatest"
-lua_cache = true
-action = "notify-send %VALUE%"
-```
+By default, the Lua script will be called on every empty query. If you don't want this behaviour, but instead want to cache the query once, you can set `Cache=true` in the menu's config.
 
 ```lua
+Name = "luatest"
+NamePretty = "Lua Test"
+Icon = "applications-other"
+Cache = true
+Action = "notify-send %VALUE%"
+HideFromProviderlist = false
+Description = "lua test menu"
+SearchName = true
+
 function GetEntries()
     local entries = {}
     local wallpaper_dir = "/home/andrej/Documents/ArchInstall/wallpapers"
@@ -112,7 +114,12 @@ function GetEntries()
                     Text = filename,
                     Subtext = "wallpaper",
                     Value = line,
+                    Actions = {
+                        up = "notify-send up",
+                        down = "notify-send down",
+                    },
                     -- Preview = line,
+                    -- PreviewType = "file",
                     -- Icon = line
                 })
             end
@@ -124,20 +131,15 @@ function GetEntries()
 end
 ```
 
-## How to target menus
+You can call Lua functions as actions as well:
 
-Menus are treated as providers and can therefore be configured as such. You can run `elephant listproviders` to get an overview of all your installed providers and custom menus.\
-\
-The output will look like this \[format: `<pretty name>;<actual name>]`:
+```Lua
+Actions = {
+    test = "lua:Test",
+}
 
+function Test(value, args)
+    os.execute("notify-send '" .. value .. "'")
+    os.execute("notify-send '" .. args .. "'")
+end
 ```
-Learn;menus:omarchylearn
-Trigger;menus:omarchytrigger
-Capture;menus:omarchycapture
-Bookmarks;menus:bookmarks
-Screenshots;menus:screenshots
-Themes;menus:themes
-Other;menus:other
-```
-
-When referencing a provider in Walker, always use the actual name.
