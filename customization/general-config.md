@@ -38,12 +38,13 @@ Placeholders for the input or empty list can be configured as such:
 
 #### Global Config
 
-| key           | type        | default                                                           | description                                                                                 |
-| ------------- | ----------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `default`     | string list | `["desktopapplications", "calc", "runner", "menus", "websearch"]` | all providers that should be queried by default                                             |
-| `empty`       | string list | `["desktopapplications"]`                                         | all providers that should be queried when query is empty                                    |
-| `previews`    | string list | `["files", "menus"]`                                              | all providers that should display a preview. Note: not all providers have an implementation |
-| `max_results` | number      | `50`                                                              | global max amount of results                                                                |
+| key                  | type                            | default                                                           | description                                                                                     |
+| -------------------- | ------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `default`            | string list                     | `["desktopapplications", "calc", "runner", "menus", "websearch"]` | all providers that should be queried by default                                                 |
+| `empty`              | string list                     | `["desktopapplications"]`                                         | all providers that should be queried when query is empty                                        |
+| `ignore_preview`     | string list                     | `[]`                                                              | all providers that should not display a preview.                                                |
+| `max_results`        | number                          | `50`                                                              | global max amount of results                                                                    |
+| `argument_delimiter` | map, key: string, value: string | ``                                                                | used to delimit arguments, f.e. `query#arg` means `arg` will be send as an argument to Elephant |
 
 #### Sets
 
