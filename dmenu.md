@@ -11,3 +11,9 @@ Walker can be used as a basic dmenu. The following flags can be used:
 | `-c, --current`     | marks the current value (with a css class `current`) |
 | `-k, --keepopen`    | keeps Walker open after selection                    |
 | `-e, --exit`        | exit after this dmenu call. only when using service  |
+
+## Example
+
+```bash
+echo `first\nsecond\nthird` | walker -d
+```
