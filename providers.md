@@ -28,3 +28,9 @@ By default, Walker provides many preconfigured prefixes for these providers out-
 Each provider has it's own documentation. You can get a complete configuration markdown file by running `elephant generatedoc`.
 
 This will provide you with documentation for every provider you have installed.
+
+## Elephant Community
+
+Elephant has a [community repo](https://github.com/abenz1267/elephant-community).
+
+Custom Menus from this repository can be installed via `elephant community`.
