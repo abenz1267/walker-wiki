@@ -64,6 +64,20 @@ empty = ["menus:omarchy"]
 
 Running `walker -s omarchy` launches Walker with these specified providers. `default` sets the providers that will be queried, while `empty` defines which ones will display entries, without searching.
 
+#### Emergency Mode
+
+Walker allows you to define static "emergency entries" in case Elephant isn't connected. Example:
+
+```toml
+[[emergencies]]
+text = "Firefox"
+command = "firefox-developer-edition"
+
+[[emergencies]]
+text = "uuctl"
+command = "uuctl"
+```
+
 #### Prefixes
 
 Prefixes can be used to explicitly target a provider, f.e.
