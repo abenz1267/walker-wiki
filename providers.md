@@ -18,6 +18,7 @@ By default Elephant doesn't actually provide any data to Walker. You can install
 - `unicode`
 - `websearch`
 - `windows`
+- `bookmarks`
 
 This modular design allows you to only install what you want, without bloating up your system with other things.
 
