@@ -20,6 +20,7 @@ Have a look at the default configuration for a reference: [https://github.com/ab
 | disable_mouse             | boolean | false     | disables mouse-interaction with Walker, **except** for drag&drop from preview pane                                   |
 | hide_quick_activation     | boolean | false     | hide the quick activation hints globally                                                                             |
 | debug                     | boolean | false     | enables debug printing in order to print various info, f.e. available/implemented actions, currently pressed keybind |
+| resume_last_query         | boolean | false     | open walker with the last query in place                                                                             |
 | shell.anchor_top          | boolean | false     | anchor for window                                                                                                    |
 | shell.anchor_bottom       | boolean | false     | anchor for window                                                                                                    |
 | shell.anchor_left         | boolean | false     | anchor for window                                                                                                    |
