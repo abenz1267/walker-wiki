@@ -4,6 +4,8 @@
 
 You can customize how Walker behaves and interacts by adjusting it's configuration to your liking.\
 \
+Default path for configuration file is `~/.config/walker/config.toml`.
+
 Have a look at the default configuration for a reference: [https://github.com/abenz1267/walker/blob/master/resources/config.toml](https://github.com/abenz1267/walker/blob/master/resources/config.toml)
 
 ### Options
