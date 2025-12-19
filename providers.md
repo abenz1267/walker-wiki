@@ -1,6 +1,6 @@
 # Providers
 
-By default Elephant doesn't actually provide any data to Walker. You can install any of these Elephant-Providers in order to "feed" Walker with the according information:
+By default, Elephant doesn't have provide any data to provide to Walker. You can install any of these Elephant-Providers in order to "feed" Walker with the according information:
 
 - `archlinuxpkgs`
 - `bluetooth`
@@ -20,7 +20,7 @@ By default Elephant doesn't actually provide any data to Walker. You can install
 - `windows`
 - `bookmarks`
 
-This modular design allows you to only install what you want, without bloating up your system with other things.
+This modular design allows you to only install what you want, without bloating up your system with every provider. There is also an `all` package avaliable with every provider except for `nirisessions`.
 
 By default, Walker provides many preconfigured prefixes for these providers out-of-the-box. Please refer to the default config.
 

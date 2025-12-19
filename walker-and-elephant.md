@@ -22,9 +22,9 @@ elephant --help
 elephant generatedoc
 ```
 
-## Providers implemented by Walker per default
+## Providers implemented by Walker
 
-Walker implements a bunch of Elephant providers by default, these are:
+Walker works natively with a bunch of Elephant providers by default, these are:
 
 - bluetooth
 - archlinux packages

@@ -10,6 +10,10 @@ To debug: run `walker` in a terminal and check it's output.
 
 If you have an Nvidia GPU, try setting `GSK_RENDERER=cairo` environment variable. GTK4 uses Vulkan by default, which might cause issues with Nvidia.
 
+### I am seeing 'Waiting for elephant...' or 'No Results'
+
+Make sure elephant is running and that you have a provider installed. Both are detailed in the Installation and Launching section.
+
 ### NO NVIDIA. SERVICE IS UP.
 
 I have no idea. Open an issue with as much information as possible.
