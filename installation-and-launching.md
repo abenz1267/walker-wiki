@@ -2,16 +2,17 @@
 
 ### Installing
 
+To install Walker, you must also install the elephant package, as well as any providers you want to be displayed on the menu.
+
 #### Arch
 
 ```
 yay -S walker
-
-// for example
+# This will install just the front-end walker package. This will not be functional by inself.
+# For example, to install elephant and the apps provider:
 yay -S elephant elephant-desktopapplications
+# This will install the basic app launcher setup.
 ```
-
-Will install a basic OOTB Walker+Elephant setup.
 
 #### Fedora
 
