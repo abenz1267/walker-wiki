@@ -49,6 +49,8 @@ Placeholders for the input or empty list can be configured as such:
 "desktopapplications" = { input = "Start", list = "No Application" }
 ```
 
+If the input placeholder is prefixed with `cmd:`, it will run the command and use the output as the placeholder.
+
 ### Providers
 
 #### Global Config
