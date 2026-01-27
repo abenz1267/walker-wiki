@@ -4,6 +4,7 @@ Walker is just a frontend that interacts with a backend, Elephant: [https://gith
 \
 Elephant allows you to create custom menus via its `menu` provider. Running `elephant generatedoc` will generate markdown output of every installed provider and it's configuration options. It also includes examples for custom menus.\
 \
+You can find more examples [here](https://github.com/abenz1267/elephant-community).
 
 ## Static Menus Examples
 
