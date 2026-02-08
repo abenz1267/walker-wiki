@@ -10,6 +10,18 @@ To debug: run `walker` in a terminal and check it's output.
 
 If you have an Nvidia GPU, try setting `GSK_RENDERER=cairo` environment variable. GTK4 uses Vulkan by default, which might cause issues with Nvidia.
 
+### My videos don't have a thumbnail
+
+Walker will auto-play video files. Make sure you have these installed:
+
+```
+  gst-libav \
+  gst-plugins-bad \
+  gst-plugins-base \
+  gst-plugins-good \
+  gst-plugins-ugly \
+```
+
 ### NO NVIDIA. SERVICE IS UP.
 
 I have no idea. Open an issue with as much information as possible.
