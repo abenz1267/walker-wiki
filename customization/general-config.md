@@ -12,6 +12,7 @@ Have a look at the default configuration for a reference: [https://github.com/ab
 
 | key                       | type    | default   | description                                                                                                          |
 | ------------------------- | ------- | --------- | -------------------------------------------------------------------------------------------------------------------- |
+| as_window                 | boolean | false     | launch walker as a regular window instead of layer shell application                                                 |
 | force_keyboard_focus      | boolean | false     | force keyboard focus to stay in walker                                                                               |
 | close_when_open           | boolean | true      | invoking walker while it's already open will close it                                                                |
 | click_to_close            | boolean | true      | clicking outside of the main walker box will close it                                                                |
@@ -22,9 +23,14 @@ Have a look at the default configuration for a reference: [https://github.com/ab
 | disable_mouse             | boolean | false     | disables mouse-interaction with Walker, **except** for drag&drop from preview pane                                   |
 | hide_quick_activation     | boolean | false     | hide the quick activation hints globally                                                                             |
 | hide_action_hints         | boolean | false     | hide the actions keybind hints                                                                                       |
+| hide_return_action        | boolean | false     | hide actions that are bound to Return                                                                                |
+| page_jump_items           | number  | 10        | number of items to skip with Page Up/Down                                                                            |
 | single_click_activation   | boolean | true      | activate items with a single click                                                                                   |
 | debug                     | boolean | false     | enables debug printing in order to print various info, f.e. available/implemented actions, currently pressed keybind |
 | resume_last_query         | boolean | false     | open walker with the last query in place                                                                             |
+| actions_as_menu           | boolean | false     | show actions in a menu                                                                                               |
+| autoplay_videos           | boolean | false     | auto-play video previews                                                                                             |
+| shell.layer               | string  | "overlay" | layershell layer                                                                                                     |
 | shell.anchor_top          | boolean | false     | anchor for window                                                                                                    |
 | shell.anchor_bottom       | boolean | false     | anchor for window                                                                                                    |
 | shell.anchor_left         | boolean | false     | anchor for window                                                                                                    |
